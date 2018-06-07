@@ -1,8 +1,8 @@
 /*
 * @Author: weilantian
 * @Date:   2018-06-06 13:07:44
-* @Last Modified by:   weilantian
-* @Last Modified time: 2018-06-06 16:10:04
+* @Last Modified by:   1uci3n
+* @Last Modified time: 2018-06-06 22:11:11
 */
 #include "fem2d.h"
 
@@ -15,7 +15,7 @@ void CalcMatrix(int nelem, ElemPtr elem){
 			for (k = 0; k < 3; ++k)
 			{
 				elem[i].se[j][k] = (elem[i].ex * elem[i].c[j] * elem[i].c[k]
-					+ elem[i].ey * elem[i]d[j] * elem[i].d[k]) * 0.25 / elem[i].delt;
+					+ elem[i].ey * elem[i].d[j] * elem[i].d[k]) * 0.25 / elem[i].delt;
 			}
 		}
 	}

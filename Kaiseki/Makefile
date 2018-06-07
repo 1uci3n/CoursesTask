@@ -25,7 +25,7 @@ $(TARGET):	$(OBJECTS)
 # サフィックスルール
 # .c から .oの作成
 .c.o:
-			$(CC) -c -Wall $< -0 $@
+			$(CC) -c -Wall $< -o $@
 
 # オブジェクトファイルの削除
 clean:

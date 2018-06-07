@@ -1,8 +1,8 @@
 /*
 * @Author: weilantian
 * @Date:   2018-06-05 16:06:21
-* @Last Modified by:   weilantian
-* @Last Modified time: 2018-06-06 16:05:08
+* @Last Modified by:   1uci3n
+* @Last Modified time: 2018-06-06 22:08:02
 */
 #include "fem2d.h"
 
@@ -10,7 +10,7 @@ void ReadMesh(int *nelem, ElemPtr elem, int *nnode, NodePtr node){
 	FILE *fp;
 	int i;
 
-	if ((fp = fopen("mesh.dat", "r") == NULL)
+	if ((fp = fopen("mesh.dat", "r")) == NULL)
 	{
 		printf("Error: Can't open mash.dat !\n");
 		exit(1);

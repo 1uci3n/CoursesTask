@@ -1,12 +1,12 @@
 /*
 * @Author: weilantian
 * @Date:   2018-06-06 12:58:57
-* @Last Modified by:   weilantian
-* @Last Modified time: 2018-06-06 15:10:58
+* @Last Modified by:   1uci3n
+* @Last Modified time: 2018-06-07 12:30:22
 */
-#include "fem2c.h"
+#include "fem2d.h"
 
-void CalxElem(int nelem, ElemPtr elem, int nnode, NodePtr node){
+void CalcElem(int nelem, ElemPtr elem, int nnode, NodePtr node){
 	int i;
 
 	for (i = 1; i <= nelem; ++i)

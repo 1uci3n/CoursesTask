@@ -1,13 +1,13 @@
 /*
 * @Author: weilantian
 * @Date:   2018-06-06 14:58:59
-* @Last Modified by:   weilantian
-* @Last Modified time: 2018-06-06 17:28:11
+* @Last Modified by:   1uci3n
+* @Last Modified time: 2018-06-06 22:13:10
 */
 #include "fem2d.h"
 
 void Gauss(int np, int nband, MatrixPtr matrix, NodePtr node){
-	int mnp, i, j, k, l, ij, kj, nbl
+	int mnp, i, j, k, l, ij, kj, nb;
 	double r, q;
 
 	mnp = np - 1;
@@ -31,7 +31,7 @@ void Gauss(int np, int nband, MatrixPtr matrix, NodePtr node){
 		node[i].v *= r;
 	}
 
-	node[np].v /= matrix[np]h[1];
+	node[np].v /= matrix[np].h[1];
 
 	for (i = 2; i <= np; ++i)
 	{

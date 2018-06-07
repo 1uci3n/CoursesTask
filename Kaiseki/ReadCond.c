@@ -1,8 +1,8 @@
 /*
 * @Author: weilantian
 * @Date:   2018-06-05 16:22:11
-* @Last Modified by:   weilantian
-* @Last Modified time: 2018-06-06 16:07:01
+* @Last Modified by:   1uci3n
+* @Last Modified time: 2018-06-06 22:08:23
 */
 #include "fem2d.h"
 
@@ -10,7 +10,7 @@ int ReadCond(int *ndiri, DiriPtr diri){
 	FILE *fp;
 	int i, count;
 
-	if ((fp = fopen("cond.dat", "r") == NULL)
+	if ((fp = fopen("cond.dat", "r")) == NULL)
 	{
 		printf("Error: Can't open cond.dat !\n");
 		exit(1);

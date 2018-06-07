@@ -1,10 +1,10 @@
 /*
 * @Author: weilantian
 * @Date:   2018-06-06 13:29:13
-* @Last Modified by:   weilantian
-* @Last Modified time: 2018-06-06 17:27:20
+* @Last Modified by:   1uci3n
+* @Last Modified time: 2018-06-06 22:08:59
 */
-#include "fem2d.j"
+#include "fem2d.h"
 
 void SetBound(int nnode, NodePtr node, int ndiri, DiriPtr diri){
 	int i, j;
