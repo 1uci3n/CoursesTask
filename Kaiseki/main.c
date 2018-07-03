@@ -1,8 +1,8 @@
 /*
 * @Author: weilantian
 * @Date:   2018-06-05 15:54:05
-* @Last Modified by:   weilantian
-* @Last Modified time: 2018-06-06 16:04:53
+* @Last Modified by:   1uci3n
+* @Last Modified time: 2018-06-07 20:41:55
 */
 
 #include "fem2d.h"
@@ -22,6 +22,7 @@ int main(int argc, char const *argv[])
 	Node node[100];
 	Diri diri[5];
 	Matrix matrix[200];
+	
 	int i;
 
 	ReadMesh(&nelem, &elem, &nnode, &node);
@@ -53,7 +54,7 @@ int main(int argc, char const *argv[])
 
 	Gauss(np, nband, &matrix, &node);
 
-	for (i = 1; i <= nnode; ++i)
+	for (i = 1; i <= nnode; i++)
 	{
 		printf("No. %d: %f\n", i, node[i].v);
 	}

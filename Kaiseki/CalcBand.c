@@ -1,27 +1,28 @@
 /*
 * @Author: weilantian
 * @Date:   2018-06-06 13:20:43
-* @Last Modified by:   weilantian
-* @Last Modified time: 2018-06-06 16:12:47
+* @Last Modified by:   1uci3n
+* @Last Modified time: 2018-06-07 20:40:05
 */
 #include "fem2d.h"
 
 int CalcBand(int np, MatrixPtr matrix, int nelem, ElemPtr elem){
 	int i, j, k, l, m, nd, count;
-	for (i = 1; i <= np; ++i)
+	
+	for (i = 1; i <= np; i++)
 	{
 		matrix[i].nk = 0;
 	}
 
-	for (i = 1; i <= nelem; ++i)
+	for (i = 1; i <= nelem; i++)
 	{
-		for (j = 0; j < 3; ++j)
+		for (j = 0; j < 3; j++)
 		{
 			if ((l = elem[i].node[j]) > np)
 			{
 				continue;
 			}
-			for (k = 0; k < 3; ++k)
+			for (k = 0; k < 3; k++)
 			{
 				if (((m = elem[i].node[k]) > np) || (m < 1) )
 				{
@@ -37,7 +38,7 @@ int CalcBand(int np, MatrixPtr matrix, int nelem, ElemPtr elem){
 
 	count = matrix[1].nk;
 
-	for (i = 2; i <= np; ++i)
+	for (i = 2; i <= np; i++)
 	{
 		j = i - 1;
 		nd = matrix[j].nk - 1;

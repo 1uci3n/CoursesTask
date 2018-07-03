@@ -2,14 +2,14 @@
 * @Author: weilantian
 * @Date:   2018-06-06 12:58:57
 * @Last Modified by:   1uci3n
-* @Last Modified time: 2018-06-07 12:30:22
+* @Last Modified time: 2018-06-07 20:40:51
 */
 #include "fem2d.h"
 
 void CalcElem(int nelem, ElemPtr elem, int nnode, NodePtr node){
 	int i;
 
-	for (i = 1; i <= nelem; ++i)
+	for (i = 1; i <= nelem; i++)
 	{
 		int j1 = elem[i].node[0];
 		int j2 = elem[i].node[1];
